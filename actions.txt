@@ -1,3 +1,0 @@
-System data reset by admin
-Admin logged out: admin
-Admin logged in: admin
