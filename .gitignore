@@ -1,0 +1,17 @@
+.vs/
+x64/
+Debug/
+Release/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.tlog
+*.lastbuildstate
+*.recipe
+*.log
+*.idb
+*.user
+library_state
+members
+actions
