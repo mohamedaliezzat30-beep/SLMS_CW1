@@ -1,29 +1,30 @@
-#ifndef MEMBER_H
-#define MEMBER_H
-
 #include "User.h"
-#include <vector>
-#include <string>
 
-class Member : public User
+User::User()
+    : username(""), password(""), fullName("")
 {
-private:
-    std::vector<int> borrowedBookIds;
+}
 
-public:
-    Member();
-    Member(const std::string& username, const std::string& password, const std::string& fullName);
+User::User(const std::string& username, const std::string& password, const std::string& fullName)
+    : username(username), password(password), fullName(fullName)
+{
+}
 
-    std::string getRole() const override;
+User::~User()
+{
+}
 
-    const std::vector<int>& getBorrowedBookIds() const;
-    bool hasBorrowedBook(int bookId) const;
-    void borrowBook(int bookId);
-    void returnBook(int bookId);
-    void clearBorrowedBooks();
+std::string User::getUsername() const
+{
+    return username;
+}
 
-    std::string serialize() const;
-    static Member deserialize(const std::string& line);
-};
+std::string User::getPassword() const
+{
+    return password;
+}
 
-#endif
+std::string User::getFullName() const
+{
+    return fullName;
+}
