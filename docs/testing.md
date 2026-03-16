@@ -1,21 +1,12 @@
 # Testing
 
-Test Case 1
-Member borrows book
-Expected: Book becomes unavailable
+## Test Case Table
 
-Test Case 2
-Member tries to borrow same book
-Expected: System prevents duplicate borrow
-
-Test Case 3
-Member reaches 5 books
-Expected: System blocks further borrowing
-
-Test Case 4
-Member reserves unavailable book
-Expected: Reservation added
-
-Test Case 5
-Admin checks overdue books
-Expected: Overdue books displayed
+| Test Case | Action | Expected Result |
+|----------|-------|----------------|
+| Borrow Book | Member borrows available book | Book becomes unavailable |
+| Duplicate Borrow | Member borrows same book again | System prevents borrowing |
+| Borrow Limit | Member borrows 6th book | System blocks borrowing |
+| Reserve Book | Member reserves borrowed book | Reservation added |
+| Return Book | Member returns book | Book becomes available |
+| Overdue Detection | Admin advances time | Overdue books detected |
