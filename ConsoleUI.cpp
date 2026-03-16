@@ -1,6 +1,7 @@
 #include "ConsoleUI.h"
 #include "Input.h"
 #include <iostream>
+#include <vector>
 
 ConsoleUI::ConsoleUI()
     : library("library_state.txt"), userStore("members.txt"), actionStore("actions.txt")
@@ -119,6 +120,8 @@ void ConsoleUI::memberMenu(Member& member)
     {
         std::cout << "\n========== MEMBER MENU ==========\n";
         std::cout << "Welcome, " << member.getFullName() << "\n";
+        std::cout << "Borrowed Books: " << member.getBorrowedBookIds().size() << "/5\n";
+        std::cout << "Borrow Limit: Maximum 5 books\n";
         std::cout << "1. View Books\n";
         std::cout << "2. Borrow Book\n";
         std::cout << "3. Return Book\n";
@@ -205,7 +208,7 @@ void ConsoleUI::viewBooks() const
     for (const Book& book : library.getBooks())
     {
         std::cout << book.getId() << ". "
-            << book.getTitle() << " - " << book.getAuthor();
+                  << book.getTitle() << " - " << book.getAuthor();
 
         if (book.isBorrowed())
         {
@@ -223,6 +226,7 @@ void ConsoleUI::viewBooks() const
 
         std::cout << "\n";
     }
+
     std::cout << "Current System Day: " << library.getCurrentDay() << "\n";
     std::cout << "=======================================\n";
     Input::pause();
@@ -231,10 +235,13 @@ void ConsoleUI::viewBooks() const
 void ConsoleUI::viewBooksForMember(const Member& member) const
 {
     std::cout << "\n========== BOOK CATALOGUE ==========\n";
+    std::cout << "Borrowed Books: " << member.getBorrowedBookIds().size() << "/5\n";
+    std::cout << "Borrow Limit: Maximum 5 books\n\n";
+
     for (const Book& book : library.getBooks())
     {
         std::cout << book.getId() << ". "
-            << book.getTitle() << " - " << book.getAuthor();
+                  << book.getTitle() << " - " << book.getAuthor();
 
         if (book.isBorrowed())
         {
@@ -259,6 +266,7 @@ void ConsoleUI::viewBooksForMember(const Member& member) const
 
         std::cout << "\n";
     }
+
     std::cout << "====================================\n";
     Input::pause();
 }
@@ -316,6 +324,7 @@ void ConsoleUI::reserveBook(Member& member)
     if (library.reserveBook(member, bookId, message))
     {
         library.save();
+
         const Book* book = library.findBookById(bookId);
         if (book != nullptr)
         {
@@ -344,8 +353,8 @@ void ConsoleUI::viewMemberBorrowedBooks(const Member& member) const
             {
                 int daysBorrowed = library.getCurrentDay() - book->getBorrowedDay();
                 std::cout << book->getId() << ". "
-                    << book->getTitle() << " - " << book->getAuthor()
-                    << " [Borrowed for " << daysBorrowed << " day(s)]\n";
+                          << book->getTitle() << " - " << book->getAuthor()
+                          << " [Borrowed for " << daysBorrowed << " day(s)]\n";
             }
         }
     }
@@ -369,11 +378,12 @@ void ConsoleUI::viewOverdueBooks() const
         {
             int daysBorrowed = library.getCurrentDay() - book.getBorrowedDay();
             std::cout << book.getId() << ". "
-                << book.getTitle() << " - " << book.getAuthor()
-                << " [Borrowed by: " << book.getBorrowedBy() << "]"
-                << " [Days borrowed: " << daysBorrowed << "]\n";
+                      << book.getTitle() << " - " << book.getAuthor()
+                      << " [Borrowed by: " << book.getBorrowedBy() << "]"
+                      << " [Days borrowed: " << daysBorrowed << "]\n";
         }
     }
+
     std::cout << "===================================\n";
     Input::pause();
 }
