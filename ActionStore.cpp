@@ -1,20 +1,46 @@
-#ifndef ACTIONSTORE_H
-#define ACTIONSTORE_H
+#include "ActionStore.h"
+#include <fstream>
 
-#include <string>
-#include <vector>
-
-class ActionStore
+ActionStore::ActionStore(const std::string& actionsFile)
+    : actionsFile(actionsFile)
 {
-private:
-    std::string actionsFile;
+}
 
-public:
-    ActionStore(const std::string& actionsFile = "actions.txt");
+void ActionStore::logAction(const std::string& action) const
+{
+    std::ofstream file(actionsFile, std::ios::app);
+    if (file.is_open())
+    {
+        file << action << "\n";
+        file.close();
+    }
+}
 
-    void logAction(const std::string& action) const;
-    std::vector<std::string> getAllActions() const;
-    void clear() const;
-};
+std::vector<std::string> ActionStore::getAllActions() const
+{
+    std::vector<std::string> actions;
+    std::ifstream file(actionsFile);
 
-#endif
+    if (!file.is_open())
+    {
+        return actions;
+    }
+
+    std::string line;
+    while (std::getline(file, line))
+    {
+        if (!line.empty())
+        {
+            actions.push_back(line);
+        }
+    }
+
+    file.close();
+    return actions;
+}
+
+void ActionStore::clear() const
+{
+    std::ofstream file(actionsFile, std::ios::trunc);
+    file.close();
+}
