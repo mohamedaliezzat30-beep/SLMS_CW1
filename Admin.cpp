@@ -1,6 +1,7 @@
 #include "Admin.h"
 
-Admin::Admin() : User()
+Admin::Admin()
+    : User()
 {
 }
 
