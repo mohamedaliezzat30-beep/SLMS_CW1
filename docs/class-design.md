@@ -1,29 +1,72 @@
 # Class Design
 
-Main classes in the system:
+The system is implemented using several classes representing system entities.
 
-User
-- username
-- password
-- fullName
+---
+
+## User Class
+
+| Attribute | Description |
+|----------|-------------|
+| username | Unique identifier for user |
+| password | Login password |
+| fullName | Name of user |
+
+Methods
+
+- getUsername()
+- getPassword()
+- getFullName()
 - getRole()
 
-Member (inherits User)
-- borrowedBookIds
+---
+
+## Member Class
+
+Derived from User.
+
+| Attribute | Description |
+|----------|-------------|
+| borrowedBookIds | List of borrowed books |
+
+Methods
+
 - borrowBook()
 - returnBook()
+- hasBorrowedBook()
 
-Admin (inherits User)
-- administrative functions
+---
 
-Library
-- borrowBook()
-- returnBook()
-- reserveBook()
-- getOverdueBooks()
+## Admin Class
 
-Book
-- id
-- title
-- author
-- borrowedBy
+Derived from User.
+
+| Method | Description |
+|-------|-------------|
+| getRole() | Returns admin role |
+
+---
+
+## Book Class
+
+| Attribute | Description |
+|----------|-------------|
+| id | Book identifier |
+| title | Book title |
+| author | Author name |
+| borrowedBy | Username of borrower |
+| borrowedDay | Day book was borrowed |
+
+---
+
+## Library Class
+
+Responsible for system rules.
+
+| Method | Description |
+|-------|-------------|
+| borrowBook() | Allows member to borrow book |
+| returnBook() | Handles returning book |
+| reserveBook() | Adds reservation |
+| getOverdueBooks() | Detects overdue books |
+| generateSystemReport() | Creates system report |
