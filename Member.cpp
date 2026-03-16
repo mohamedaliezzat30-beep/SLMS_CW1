@@ -36,7 +36,8 @@ namespace
     }
 }
 
-Member::Member() : User()
+Member::Member()
+    : User()
 {
 }
 
