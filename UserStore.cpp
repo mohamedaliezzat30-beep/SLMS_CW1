@@ -31,10 +31,16 @@ void UserStore::load()
 void UserStore::save() const
 {
     std::ofstream file(membersFile, std::ios::trunc);
+    if (!file.is_open())
+    {
+        return;
+    }
+
     for (const Member& member : members)
     {
         file << member.serialize() << "\n";
     }
+
     file.close();
 }
 
@@ -77,6 +83,7 @@ Member* UserStore::authenticateMember(const std::string& username, const std::st
             return &member;
         }
     }
+
     return nullptr;
 }
 
@@ -109,6 +116,7 @@ Member* UserStore::findMemberByUsername(const std::string& username)
             return &member;
         }
     }
+
     return nullptr;
 }
 
