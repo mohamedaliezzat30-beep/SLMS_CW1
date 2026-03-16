@@ -1,0 +1,13 @@
+﻿C:\Program Files\Microsoft Visual Studio\18\Professional\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(548,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (SLMS_CPP.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ActionStore.cpp
+  Admin.cpp
+  Book.cpp
+  ConsoleUI.cpp
+  Input.cpp
+  Library.cpp
+  main.cpp
+  Member.cpp
+  User.cpp
+  UserStore.cpp
+  Generating Code...
+  SLMS_CPP4.vcxproj -> C:\Users\mogol\Downloads\SLMS_CPP4\x64\Debug\SLMS_CW.exe
