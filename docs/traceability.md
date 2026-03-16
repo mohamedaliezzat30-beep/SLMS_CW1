@@ -1,13 +1,12 @@
-# Traceability
+# Requirements Traceability Matrix
 
-Requirement → Implementation
-
-Borrow books → Library::borrowBook()
-
-Return books → Library::returnBook()
-
-Reserve books → Library::reserveBook()
-
-Member login → UserStore::authenticateMember()
-
-Admin functions → ConsoleUI admin menu
+| Requirement | Implementation | Class |
+|-------------|---------------|------|
+| Borrow book | borrowBook() | Library |
+| Return book | returnBook() | Library |
+| Reserve book | reserveBook() | Library |
+| Borrow limit | borrowing rules | Library |
+| Member login | authenticateMember() | UserStore |
+| Admin login | authenticateAdmin() | UserStore |
+| Overdue detection | getOverdueBooks() | Library |
+| System report | generateSystemReport() | Library |
