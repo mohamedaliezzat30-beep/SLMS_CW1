@@ -22,6 +22,7 @@ namespace
     std::string joinInts(const std::vector<int>& items, char delimiter)
     {
         std::ostringstream oss;
+
         for (size_t i = 0; i < items.size(); ++i)
         {
             oss << items[i];
@@ -30,6 +31,7 @@ namespace
                 oss << delimiter;
             }
         }
+
         return oss.str();
     }
 }
