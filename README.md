@@ -8,6 +8,36 @@ The main goal of the system is to demonstrate object-oriented programming concep
 
 ---
 
+## Important Files & Quick Access
+
+The following files contain the main documentation and system details:
+
+| File | Description |
+|------|------------|
+| [README.md](./README.md) | Project overview and features |
+| [Architecture](./docs/architecture.md) | System architecture design |
+| [Class Design](./docs/class-design.md) | Explanation of system classes |
+| [Requirements](./docs/requirements.md) | Functional and non-functional requirements |
+| [Testing](./docs/testing.md) | Test cases and validation |
+| [Traceability](./docs/traceability.md) | Requirement mapping |
+| [Pseudocode](./docs/pseudocode.md) | Algorithm design |
+| [Screenshots](./docs/screenshots.md) | Visual evidence of system execution |
+
+---
+
+## Quick Navigation (Magic Links)
+
+Click below to jump directly to key sections:
+
+-  [View System Screenshots](./docs/screenshots.md)
+-  [Go to Architecture](./docs/architecture.md)
+-  [View Class Design](./docs/class-design.md)
+-  [Check Testing](./docs/testing.md)
+-  [View Requirements](./docs/requirements.md)
+
+---
+
+
 ## System Users
 
 | User Type | Description |
