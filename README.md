@@ -123,3 +123,43 @@ Full system screenshots are available here:
 ---
 
 ## Project Structure
+SLMS_CW1
+│  
+├── README.md  
+│  
+├── docs  
+│ ├── architecture.md  
+│ ├── class-design.md  
+│ ├── requirements.md  
+│ ├── testing.md  
+│ ├── traceability.md  
+│ ├── pseudocode.md  
+│ ├── screenshots.md  
+│ ├── main-menu.png  
+│ ├── borrow-book.png  
+│ ├── member-menu.png  
+│ └── ...  
+│  
+├── *.cpp  
+├── *.h  
+└── project files  
+
+
+---
+
+## Conclusion
+
+This project successfully demonstrates:
+
+- Real-world system design  
+- Object-Oriented Programming principles  
+- Functional library simulation  
+
+The system meets all coursework requirements and provides clear evidence through documentation and screenshots.
+
+---
+
+## Author
+
+Mohamed Abdelrahman  
+22403818
