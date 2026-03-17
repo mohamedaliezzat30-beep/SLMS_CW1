@@ -2,130 +2,124 @@
 
 ## Overview
 
-The Smart Library Management System (SLMS) is a console-based application developed in C++ using Object-Oriented Programming (OOP). The system simulates a small digital library where members can browse books, borrow books, return books, and reserve unavailable books. Administrators can monitor the system, detect overdue books, and generate system reports.
+The Smart Library Management System (SLMS) is a console-based application developed in **C++ using Object-Oriented Programming (OOP)** principles.
 
-The main goal of the system is to demonstrate object-oriented programming concepts while implementing a functional library system.
+The system simulates a real library environment where users can borrow, return, and reserve books, while administrators can monitor and manage system operations.
+
+---
+
+## Key Features
+
+### Member Features
+
+| Feature | Description |
+|--------|-------------|
+| Create Account | Register a new member |
+| Login | Access system features |
+| View Books | Browse library catalogue |
+| Borrow Book | Borrow available books |
+| Return Book | Return borrowed books |
+| Reserve Book | Reserve unavailable books |
+| View Borrowed Books | Track borrowed items |
+
+---
+
+### Administrator Features
+
+| Feature | Description |
+|--------|-------------|
+| Admin Login | Access admin panel |
+| View Catalogue | Monitor all books |
+| Advance Time | Simulate system days |
+| Overdue Detection | Identify late returns |
+| System Report | Generate summary |
+| Reset System | Restore initial state |
+
+---
+
+## System Rules
+
+| Rule | Description |
+|-----|-------------|
+| Borrow Limit | Max 5 books per member |
+| No Duplicate Borrowing | Same book cannot be borrowed twice |
+| Reservation Queue | FIFO reservation system |
+| Borrow Tracking | Tracks borrow date |
+
+---
+
+## OOP Concepts Used
+
+| Concept | Implementation |
+|--------|---------------|
+| Encapsulation | Each class manages its own data |
+| Inheritance | `Member` and `Admin` inherit from `User` |
+| Polymorphism | `getRole()` behaves differently |
 
 ---
 
 ## Important Files & Quick Access
 
-The following files contain the main documentation and system details:
-
 | File | Description |
 |------|------------|
-| [README.md](./README.md) | Project overview and features |
-| [Architecture](./docs/architecture.md) | System architecture design |
-| [Class Design](./docs/class-design.md) | Explanation of system classes |
-| [Requirements](./docs/requirements.md) | Functional and non-functional requirements |
-| [Testing](./docs/testing.md) | Test cases and validation |
-| [Traceability](./docs/traceability.md) | Requirement mapping |
-| [Pseudocode](./docs/pseudocode.md) | Algorithm design |
-| [Screenshots](./docs/screenshots.md) | Visual evidence of system execution |
+| [ Architecture](./docs/architecture.md) | System structure |
+| [ Class Design](./docs/class-design.md) | Class explanations |
+| [ Requirements](./docs/requirements.md) | System requirements |
+| [ Testing](./docs/testing.md) | Test cases |
+| [ Traceability](./docs/traceability.md) | Requirement mapping |
+| [ Pseudocode](./docs/pseudocode.md) | Algorithms |
+| [ Screenshots](./docs/screenshots.md) | System evidence |
 
 ---
 
 ## Quick Navigation (Magic Links)
 
-Click below to jump directly to key sections:
-
--  [View System Screenshots](./docs/screenshots.md)
--  [Go to Architecture](./docs/architecture.md)
--  [View Class Design](./docs/class-design.md)
--  [Check Testing](./docs/testing.md)
--  [View Requirements](./docs/requirements.md)
+- [ View Screenshots](./docs/screenshots.md)
+- [ Architecture](./docs/architecture.md)
+- [ Class Design](./docs/class-design.md)
+- [ Testing](./docs/testing.md)
+- [ Requirements](./docs/requirements.md)
 
 ---
 
+## System Preview
 
-## System Users
-
-| User Type | Description |
-|-----------|-------------|
-| Member | A library user who can borrow, return, and reserve books |
-| Admin | A system administrator who monitors and manages the system |
-
----
-
-## Member Features
-
-| Feature | Description |
-|-------|-------------|
-| Create Account | Members can create new accounts |
-| Login | Members can login to the system |
-| View Catalogue | Members can see all available books |
-| Borrow Book | Members can borrow available books |
-| Return Book | Members can return books they borrowed |
-| Reserve Book | Members can reserve books that are already borrowed |
-| View Borrowed Books | Members can see the books they currently borrowed |
-
----
-
-## Administrator Features
-
-| Feature | Description |
-|--------|-------------|
-| Admin Login | Access administrator functions |
-| View Catalogue | View all books in the library |
-| View Overdue Books | Detect books borrowed beyond allowed time |
-| Advance System Time | Simulate passing days in the system |
-| Generate Report | Generate a summary of system activity |
-| Reset System | Restore system to initial state |
-
----
-
-## Borrowing Rules
-
-| Rule | Description |
-|------|-------------|
-| Borrow Limit | Maximum 5 books per member |
-| Duplicate Borrowing | A member cannot borrow the same book twice |
-| Reservation Queue | Reserved books are assigned in order |
-| Borrow Tracking | Each book stores the day it was borrowed |
-
----
-
-## Object-Oriented Programming Concepts
-
-| Concept | Implementation |
-|-------|----------------|
-| Inheritance | Member and Admin inherit from the User class |
-| Encapsulation | Classes manage their own data and behaviour |
-| Polymorphism | The getRole() function behaves differently depending on user type |
-
----
-
-## Project Structure
-
-| Component | Responsibility |
-|-----------|---------------|
-| ConsoleUI | Handles menus and user interaction |
-| Library | Manages book catalogue and borrowing logic |
-| Book | Represents book data |
-| User | Base class for users |
-| Member | Library member class |
-| Admin | Administrator class |
-| UserStore | Handles user authentication |
-| ActionStore | Logs system actions |
-| Input | Handles user input validation |
+| Feature | Preview |
+|--------|--------|
+| Main Menu | ![](./docs/main-menu.png) |
+| Member Menu | ![](./docs/member-menu.png) |
+| Borrow Book | ![](./docs/borrow-book.png) |
 
 ---
 
 ## How to Run
 
-1. Open the project in Visual Studio
-2. Open the `.vcxproj` project file
+1. Open project in **Visual Studio**
+2. Open `SLMS_CPP4.vcxproj`
 3. Build the solution
 4. Run using **Local Windows Debugger**
 
 ---
 
-## Testing
+## Testing Summary
 
-The system was tested using multiple scenarios including:
+The system has been tested for:
 
-- Borrowing available books
-- Preventing duplicate borrowing
-- Enforcing borrowing limits
-- Reserving unavailable books
-- Detecting overdue books
+- Borrowing and returning books  
+- Duplicate borrow prevention  
+- Borrow limit enforcement  
+- Reservation system  
+- Overdue detection  
+- Admin system controls  
+
+---
+
+## Evidence
+
+Full system screenshots are available here:
+
+**[View All Screenshots](./docs/screenshots.md)**
+
+---
+
+## Project Structure
