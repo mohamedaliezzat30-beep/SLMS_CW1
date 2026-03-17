@@ -1,14 +1,17 @@
 # System Demonstration Screenshots
 
-This section provides visual evidence of the Smart Library Management System.
+This section provides visual evidence of the Smart Library Management System.  
+The screenshots demonstrate both member and administrator functionality and confirm that the system meets the coursework requirements.
 
 ---
+
+# Member Functionality
 
 ## Main Menu
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Main Menu](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/main-menu.png) | The main menu is the entry point of the system. |
+| ![Main Menu](./main-menu.png) | The main menu is the entry point of the system where users can choose to login, create an account, or exit. |
 
 ---
 
@@ -16,7 +19,7 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Create Account](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/create-account.png) | Members can create accounts. |
+| ![Create Account](./create-account.png) | Members can create a new account by entering their personal details. |
 
 ---
 
@@ -24,7 +27,7 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Member Login](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/member-login.png) | Members login using credentials. |
+| ![Member Login](./member-login.png) | Members login using their username and password to access the system. |
 
 ---
 
@@ -32,7 +35,15 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Member Menu](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/member-menu.png) | Displays member features. |
+| ![Member Menu](./member-menu.png) | Displays all available member options including viewing books, borrowing, returning, and reserving. |
+
+---
+
+## View Book Catalogue
+
+| Screenshot | Description |
+|-----------|-------------|
+| ![View Books](./view-books.png) | Members can view all books in the library along with their availability status. |
 
 ---
 
@@ -40,7 +51,7 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Borrow Book](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/borrow-book.png) | Members borrow available books. |
+| ![Borrow Book](./borrow-book.png) | Members can borrow available books from the catalogue. |
 
 ---
 
@@ -48,15 +59,15 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Duplicate Borrow](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/duplicate-borrow.png) | System prevents borrowing same book twice. |
+| ![Duplicate Borrow](./duplicate-borrow.png) | The system prevents a member from borrowing the same book more than once. |
 
 ---
 
-## Borrow Limit
+## Borrow Limit Enforcement
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Borrow Limit](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/borrow-limit.png) | Max 5 books allowed. |
+| ![Borrow Limit](./borrow-limit.png) | The system enforces a maximum limit of five borrowed books per member. |
 
 ---
 
@@ -64,7 +75,7 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Return Book](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/return-book.png) | Members return books. |
+| ![Return Book](./return-book.png) | Members can return borrowed books, making them available again. |
 
 ---
 
@@ -72,15 +83,33 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Reserve Book](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/reserve-book.png) | Members reserve unavailable books. |
+| ![Reserve Book](./reserve-book.png) | Members can reserve books that are currently unavailable. |
 
 ---
+
+## View Borrowed Books
+
+| Screenshot | Description |
+|-----------|-------------|
+| ![View Borrowed](./view-borrowed.png) | Members can view all books they have currently borrowed. |
+
+---
+
+# Administrator Functionality
 
 ## Admin Menu
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Admin Menu](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/admin-menu.png) | Admin controls system. |
+| ![Admin Menu](./admin-menu.png) | Displays all administrative options including monitoring and system control features. |
+
+---
+
+## Advance System Time
+
+| Screenshot | Description |
+|-----------|-------------|
+| ![Advance Time](./advance-time.png) | The administrator can advance the system time to simulate passing days. |
 
 ---
 
@@ -88,7 +117,7 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Overdue Books](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/overdue-books.png) | Shows overdue books. |
+| ![Overdue Books](./overdue-books.png) | The system detects and displays books that are overdue. |
 
 ---
 
@@ -96,7 +125,7 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![System Report](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/system-report.png) | Displays report. |
+| ![System Report](./system-report.png) | The system generates a report summarizing system activity. |
 
 ---
 
@@ -104,4 +133,21 @@ This section provides visual evidence of the Smart Library Management System.
 
 | Screenshot | Description |
 |-----------|-------------|
-| ![Reset System](https://raw.githubusercontent.com/mohamedaliezzat30-beep/SLMS_CW1/main/docs/screenshots/reset-system.png) | Resets system data. |
+| ![Reset System](./reset-system.png) | The administrator can reset all system data. |
+
+---
+
+# Summary
+
+The screenshots above demonstrate that the system successfully implements:
+
+- Member account creation and login  
+- Book borrowing and returning  
+- Duplicate borrowing prevention  
+- Borrow limit enforcement  
+- Reservation system  
+- Administrator monitoring tools  
+- Overdue book detection  
+- System reporting and reset functionality  
+
+These screenshots provide clear evidence that the Smart Library Management System meets the coursework requirements.
